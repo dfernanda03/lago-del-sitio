@@ -1,7 +1,7 @@
 
 import { Play } from 'lucide-react';
 
-import videoActividades from '../assets/atardecer.mp4';
+import videoActividades from '../assets/Atardecer.mp4';
 import videoLago from '../assets/lago.mp4';
 import videoNaturaleza from '../assets/naturaleza.mp4';
 
