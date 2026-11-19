@@ -1,0 +1,144 @@
+
+.section {
+  padding: 105px 10vw;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+h2 {
+  color: #31421e;
+  font-size: clamp(36px, 4.5vw, 61px);
+  margin-bottom: 0;
+}
+
+.heading-note {
+  color: #7b8470;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 7px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e1e5d7;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(52,73,28,.12);
+}
+
+.service-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,.85);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-image:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(27,44,18,.62));
+}
+
+.image-icon {
+  position: relative;
+  z-index: 1;
+  opacity: .8;
+}
+
+.image-label {
+  position: absolute;
+  z-index: 2;
+  top: 17px;
+  left: 17px;
+  font-size: 8px;
+  letter-spacing: .16em;
+  color: #fff;
+  font-weight: 900;
+}
+
+
+.service-body {
+  padding: 23px 21px 22px;
+}
+
+h3 {
+  font-family: 'Kanit', sans-serif;
+  color: #344522;
+  font-size: 19px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.service-body p {
+  min-height: 54px;
+  color: #808978;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.service-body a {
+  color: #4a5d23;
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: .12em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .heading-note {
+    margin-top: 22px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    height: 165px;
+  }
+}

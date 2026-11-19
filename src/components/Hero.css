@@ -1,0 +1,161 @@
+.hero {
+  min-height: 650px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 90px 12vw;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.30);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 670px;
+}
+
+.eyebrow {
+  margin: 0 0 17px;
+  color: #718458;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .22em;
+}
+
+.eyebrow.light {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow.light span {
+  width: 28px;
+  height: 1px;
+  background: #ffbf00;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.02;
+}
+
+h1 {
+  font-size: clamp(45px, 6.5vw, 84px);
+  margin: 0 0 22px;
+}
+
+h1 em,
+h2 em {
+  color: #ffbf00;
+  font-style: normal;
+}
+
+.hero-copy {
+  max-width: 380px;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #e7ebdc;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  padding: 16px 22px;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-gold {
+  background: #ffbf00;
+  color: #293617;
+}
+
+.hero-scroll {
+  position: absolute;
+  left: 6vw;
+  bottom: 30px;
+  font-size: 9px;
+  letter-spacing: .18em;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.hero-scroll span {
+  display: block;
+  height: 38px;
+  width: 1px;
+  background: #ffbf00;
+}
+
+.hero-stamp {
+  position: absolute;
+  right: 7vw;
+  bottom: 33px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #ffbf00;
+  font-size: 9px;
+  line-height: 1.2;
+  letter-spacing: .1em;
+}
+
+.hero-stamp b {
+  color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 80px 8vw;
+    min-height: 630px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 610px;
+    padding: 70px 7vw;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .hero-stamp {
+    display: none;
+  }
+}
